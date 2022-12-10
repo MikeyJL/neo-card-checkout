@@ -9,7 +9,7 @@ const Barcode: FC<IProps> = ({ className }) => {
   const bars: number[] = (() => {
     let width = 132;
     const maxBar = 6;
-    const minBar = 2;
+    const minBar = 1;
     const barsList: number[] = [];
 
     while (width > 0) {
