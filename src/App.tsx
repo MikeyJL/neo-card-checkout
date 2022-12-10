@@ -60,7 +60,9 @@ const App = () => {
             onClick={() => setSameBilling((value) => !value)}
           >
             <div className="mx-[11px] flex h-3 w-3 shrink-0 items-center justify-center rounded-full border border-black">
-              {sameBilling && <div className="h-2 w-2 rounded-full bg-black" />}
+              {sameBilling && (
+                <div className="h-2 w-2 rounded-full bg-blue-400" />
+              )}
             </div>
 
             <p className="text-xs">

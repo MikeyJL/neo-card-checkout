@@ -25,8 +25,8 @@ const SelectRow: FC<IProps> = ({
     >
       <p className="text-xs">{label}</p>
 
-      <div className="w-3 h-3 rounded-full border border-black flex items-center justify-center">
-        {selected && <div className="w-2 h-2 rounded-full bg-black" />}
+      <div className="flex h-3 w-3 items-center justify-center rounded-full border border-black">
+        {selected && <div className="h-2 w-2 rounded-full bg-blue-400" />}
       </div>
     </div>
   );
