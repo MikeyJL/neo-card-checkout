@@ -5,19 +5,18 @@ import { CardType } from "./types";
 
 const App = () => {
   const [cardType, setCardType] = useState<CardType>("credit");
+  const [sameBilling, setSameBilling] = useState<boolean>(false);
 
   return (
-    <main className="flex flex-col items-center justify-center h-screen w-screen">
+    <main className="flex h-screen w-screen flex-col items-center justify-center">
       {/* Receipt */}
       <div className="c-card w-[328px] px-5 py-4">
-        <p className="text-center font-bold leading-5 mb-3">CHECK OUT</p>
+        <p className="mb-3 text-center font-bold leading-5">CHECK OUT</p>
 
         {/* Card type*/}
-        <hr className="c-rule" />
-        <p className="leading-[14px] mt-1 mb-1.5 font-bold text-xs">
+        <p className="mb-3 border-y border-black pt-1 pb-1.5 text-xs font-bold leading-[14px]">
           Card type
         </p>
-        <hr className="c-rule mb-3" />
         {CARD_TYPE_OPTIONS.map((type) => (
           <SelectRow
             key={type.value}
@@ -28,6 +27,47 @@ const App = () => {
             onChange={(type) => setCardType(type as CardType)}
           />
         ))}
+        {/* Name */}
+        <p className="mb-6 border-y border-black pt-1 pb-1.5 text-xs font-bold leading-[14px]">
+          Name on card
+        </p>
+
+        {/* Card */}
+        <div className="flex border-y border-black">
+          <div className="w-full border-r border-black pt-1 pb-1.5">
+            <p className="text-xs font-bold leading-[14px]">Card number</p>
+          </div>
+
+          <div className="shrink-0 pt-1 pb-1.5 pl-[7px]">
+            <p className="text-xs font-bold leading-[14px]">Security code</p>
+          </div>
+        </div>
+        <div className="flex border-b border-black">
+          <div className="w-full border-r border-black" />
+
+          <div className="shrink-0 pt-1 pb-1.5 pl-[7px]">
+            <div className="h-[12px] w-[94px]" />
+          </div>
+        </div>
+        <p className="mb-6 border-b border-black pt-1 pb-1.5 text-xs font-bold leading-[14px]">
+          Expiration date
+        </p>
+
+        {/* Billing */}
+        <div className="border-y border-black pt-[23px] pb-[21px]">
+          <div
+            className="flex items-center"
+            onClick={() => setSameBilling((value) => !value)}
+          >
+            <div className="mx-[11px] flex h-3 w-3 shrink-0 items-center justify-center rounded-full border border-black">
+              {sameBilling && <div className="h-2 w-2 rounded-full bg-black" />}
+            </div>
+
+            <p className="text-xs">
+              My billing address is the same as my shipping address
+            </p>
+          </div>
+        </div>
       </div>
     </main>
   );
