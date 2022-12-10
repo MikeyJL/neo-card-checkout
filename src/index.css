@@ -10,3 +10,17 @@ body {
 
   @apply bg-gray-100;
 }
+
+@layer components {
+  .c-card {
+    background: #efeeee;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 6px 6px 16px rgba(209, 205, 199, 0.5),
+      -6px -6px 16px rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+  }
+
+  .c-rule {
+    @apply w-full border border-black;
+  }
+}
