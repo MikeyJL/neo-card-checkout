@@ -28,11 +28,14 @@ const App = () => {
           />
         ))}
         {/* Name */}
-        <p className="mb-6 border-y border-black pt-1 pb-1.5 text-xs font-bold leading-[14px]">
+        <p className="border-y border-black pt-1 pb-1.5 text-xs font-bold leading-[14px]">
           Name on card
         </p>
+        <p className="pt-1 pb-1.5 text-xs font-bold leading-[14px] text-blue-400">
+          Jane Doe
+        </p>
 
-        {/* Card */}
+        {/* Card - Header */}
         <div className="flex border-y border-black">
           <div className="w-full border-r border-black pt-1 pb-1.5">
             <p className="text-xs font-bold leading-[14px]">Card number</p>
@@ -42,15 +45,26 @@ const App = () => {
             <p className="text-xs font-bold leading-[14px]">Security code</p>
           </div>
         </div>
+
+        {/* Card - Data */}
         <div className="flex border-b border-black">
-          <div className="w-full border-r border-black" />
+          <div className="w-full border-r border-black pt-1 pb-1.5">
+            <p className="text-xs font-bold leading-[14px] text-blue-400">
+              83974 7392 37924
+            </p>
+          </div>
 
           <div className="shrink-0 pt-1 pb-1.5 pl-[7px]">
-            <div className="h-[12px] w-[94px]" />
+            <p className="w-[94px] text-right text-xs font-bold leading-[14px]">
+              ...
+            </p>
           </div>
         </div>
-        <p className="mb-6 border-b border-black pt-1 pb-1.5 text-xs font-bold leading-[14px]">
+        <p className="border-b border-black pt-1 pb-1.5 text-xs font-bold leading-[14px]">
           Expiration date
+        </p>
+        <p className="pt-1 pb-1.5 text-xs font-bold leading-[14px] text-blue-400">
+          24/05/2024
         </p>
 
         {/* Billing */}

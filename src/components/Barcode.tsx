@@ -8,7 +8,7 @@ interface IProps {
 const Barcode: FC<IProps> = ({ className }) => {
   const bars: number[] = (() => {
     let width = 132;
-    const maxBar = 8;
+    const maxBar = 6;
     const minBar = 2;
     const barsList: number[] = [];
 
