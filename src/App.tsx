@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { SelectRow } from "./components";
+import { Barcode, SelectRow } from "./components";
 import { CARD_TYPE_OPTIONS } from "./constants";
 import { CardType } from "./types";
 
@@ -70,6 +70,10 @@ const App = () => {
             </p>
           </div>
         </div>
+
+        {/* Scan */}
+        <p className="my-2.5 text-center font-bold">THANK YOU!</p>
+        <Barcode className="mx-auto" />
       </div>
     </main>
   );
