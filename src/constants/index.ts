@@ -14,3 +14,15 @@ export const CARD_TYPE_OPTIONS: SelectOption<string, CardType>[] = [
 		value: "mastercard",
 	},
 ];
+
+export const TOP_BUTTONS: { label: string }[] = [
+	{
+		label: "1",
+	},
+	{
+		label: "2",
+	},
+	{
+		label: "3",
+	},
+];

@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { Barcode, CircleButton, SelectRow } from "./components";
-import { CARD_TYPE_OPTIONS } from "./constants";
+import { CARD_TYPE_OPTIONS, TOP_BUTTONS } from "./constants";
 import { CardType } from "./types";
+import { ReactComponent as ApplePay } from "./assets/icons/apple-pay.svg";
+import { ReactComponent as PayPal } from "./assets/icons/paypal.svg";
 
 const App = () => {
   const [cardType, setCardType] = useState<CardType>("credit");
@@ -11,9 +13,9 @@ const App = () => {
     <main className="flex h-screen w-screen flex-col items-center justify-center">
       {/* Buttons */}
       <div className="mb-[25px] flex w-[328px] items-center justify-evenly">
-        <CircleButton label="1" />
-        <CircleButton label="2" />
-        <CircleButton label="3" />
+        {TOP_BUTTONS.map(({ label }) => (
+          <CircleButton key={label}>{label}</CircleButton>
+        ))}
       </div>
 
       {/* Receipt */}
@@ -95,6 +97,22 @@ const App = () => {
         {/* Scan */}
         <p className="my-2.5 text-center font-bold">THANK YOU!</p>
         <Barcode className="mx-auto" />
+      </div>
+
+      {/* Confirm */}
+      <p className="mt-10 mb-5">OR CHECKOUT THROUGH ANOTHER PAYMENT METHOD</p>
+
+      {/* Confirm buttons */}
+      <div className="flex items-center space-x-10">
+        {/* Apple Pay */}
+        <CircleButton>
+          <ApplePay />
+        </CircleButton>
+
+        {/* PayPal */}
+        <CircleButton>
+          <PayPal />
+        </CircleButton>
       </div>
     </main>
   );

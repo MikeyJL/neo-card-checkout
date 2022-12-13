@@ -1,14 +1,17 @@
 import classNames from "classnames";
-import { FC } from "react";
+import { FC, PropsWithChildren } from "react";
 
 interface IProps {
-  label: string;
   className?: string;
   innerClassName?: string;
 }
 
 /** Circle neomorphic button. */
-const CircleButton: FC<IProps> = ({ label, className, innerClassName }) => {
+const CircleButton: FC<PropsWithChildren<IProps>> = ({
+  className,
+  innerClassName,
+  children,
+}) => {
   return (
     <button className={classNames("neo h-12 w-12 rounded-full", className)}>
       <div
@@ -17,7 +20,7 @@ const CircleButton: FC<IProps> = ({ label, className, innerClassName }) => {
           innerClassName
         )}
       >
-        <p>{label}</p>
+        {children}
       </div>
     </button>
   );
