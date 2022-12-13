@@ -14,7 +14,7 @@ const App = () => {
         <p className="mb-3 text-center font-bold leading-5">CHECK OUT</p>
 
         {/* Card type*/}
-        <p className="mb-3 border-y border-black pt-1 pb-1.5 text-xs font-bold leading-[14px]">
+        <p className="mb-3 border-y border-black py-[5px] text-xs font-bold leading-[14px]">
           Card type
         </p>
         {CARD_TYPE_OPTIONS.map((type) => (
@@ -28,42 +28,42 @@ const App = () => {
           />
         ))}
         {/* Name */}
-        <p className="border-y border-black pt-1 pb-1.5 text-xs font-bold leading-[14px]">
+        <p className="border-y border-black py-[5px] text-xs font-bold leading-[14px]">
           Name on card
         </p>
-        <p className="pt-1 pb-1.5 text-xs font-bold leading-[14px] text-blue-400">
+        <p className="py-[5px] text-xs font-bold leading-[14px] text-blue-400">
           Jane Doe
         </p>
 
         {/* Card - Header */}
         <div className="flex border-y border-black">
-          <div className="w-full border-r border-black pt-1 pb-1.5">
+          <div className="w-full border-r border-black py-[5px]">
             <p className="text-xs font-bold leading-[14px]">Card number</p>
           </div>
 
-          <div className="shrink-0 pt-1 pb-1.5 pl-[7px]">
+          <div className="shrink-0 py-[5px] pl-[7px]">
             <p className="text-xs font-bold leading-[14px]">Security code</p>
           </div>
         </div>
 
         {/* Card - Data */}
         <div className="flex border-b border-black">
-          <div className="w-full border-r border-black pt-1 pb-1.5">
+          <div className="w-full border-r border-black py-[5px]">
             <p className="text-xs font-bold leading-[14px] text-blue-400">
               83974 7392 37924
             </p>
           </div>
 
-          <div className="shrink-0 pt-1 pb-1.5 pl-[7px]">
+          <div className="shrink-0 py-[5px] pl-[7px]">
             <p className="w-[94px] text-right text-xs font-bold leading-[14px]">
               ...
             </p>
           </div>
         </div>
-        <p className="border-b border-black pt-1 pb-1.5 text-xs font-bold leading-[14px]">
+        <p className="border-b border-black py-[5px] text-xs font-bold leading-[14px]">
           Expiration date
         </p>
-        <p className="pt-1 pb-1.5 text-xs font-bold leading-[14px] text-blue-400">
+        <p className="py-[5px] text-xs font-bold leading-[14px] text-blue-400">
           24/05/2024
         </p>
 
