@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Barcode, SelectRow } from "./components";
+import { Barcode, CircleButton, SelectRow } from "./components";
 import { CARD_TYPE_OPTIONS } from "./constants";
 import { CardType } from "./types";
 
@@ -9,6 +9,13 @@ const App = () => {
 
   return (
     <main className="flex h-screen w-screen flex-col items-center justify-center">
+      {/* Buttons */}
+      <div className="mb-[25px] flex w-[328px] items-center justify-evenly">
+        <CircleButton label="1" />
+        <CircleButton label="2" />
+        <CircleButton label="3" />
+      </div>
+
       {/* Receipt */}
       <div className="c-card w-[328px] px-5 py-4">
         <p className="mb-3 text-center font-bold leading-5">CHECK OUT</p>

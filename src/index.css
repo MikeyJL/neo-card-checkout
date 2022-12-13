@@ -11,12 +11,17 @@ body {
   @apply bg-gray-100;
 }
 
-@layer components {
-  .c-card {
+@layer utilities {
+  .neo {
     background: #efeeee;
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 6px 6px 16px rgba(209, 205, 199, 0.5),
       -6px -6px 16px rgba(255, 255, 255, 0.5);
-    border-radius: 10px;
+  }
+}
+
+@layer components {
+  .c-card {
+    @apply neo rounded-[10px];
   }
 }
