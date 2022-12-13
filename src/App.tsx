@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Barcode, CircleButton, SelectRow } from "./components";
+import { Barcode, Button, CircleButton, SelectRow } from "./components";
 import { CARD_TYPE_OPTIONS, TOP_BUTTONS } from "./constants";
 import { CardType } from "./types";
 import { ReactComponent as ApplePay } from "./assets/icons/apple-pay.svg";
@@ -103,7 +103,7 @@ const App = () => {
       <p className="mt-10 mb-5">OR CHECKOUT THROUGH ANOTHER PAYMENT METHOD</p>
 
       {/* Confirm buttons */}
-      <div className="flex items-center space-x-10">
+      <div className="mb-[14px] flex items-center space-x-10">
         {/* Apple Pay */}
         <CircleButton>
           <ApplePay />
@@ -114,6 +114,9 @@ const App = () => {
           <PayPal />
         </CircleButton>
       </div>
+
+      {/* Continue button*/}
+      <Button className="max-w-[328px]">Confirm and continue</Button>
     </main>
   );
 };
