@@ -18,6 +18,10 @@ body {
     box-shadow: 6px 6px 16px rgba(209, 205, 199, 0.5),
       -6px -6px 16px rgba(255, 255, 255, 0.5);
   }
+  .neo-active:active {
+    box-shadow: inset -4px -4px 8px rgba(255, 255, 255, 0.5),
+      inset 8px 8px 16px rgba(0, 0, 0, 0.05);
+  }
 }
 
 @layer components {

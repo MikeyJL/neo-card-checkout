@@ -10,7 +10,7 @@ const Button: FC<PropsWithChildren<IProps>> = ({ className, children }) => {
   return (
     <button
       className={classNames(
-        "neo w-full rounded-[50px] py-2 font-bold",
+        "neo neo-active w-full rounded-[50px] py-2 font-bold transition-all hover:opacity-60 active:opacity-100",
         className
       )}
     >
